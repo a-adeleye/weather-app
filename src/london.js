@@ -12,16 +12,20 @@ async function londonData() {
 
     return { temperature, icon };
   } catch (error) {
-    console.log(error);
+    
   }
 }
 
 export async function showLondonData() {
-  const data = await londonData();
+  try{
+    const data = await londonData();
 
   const icon = document.getElementById("londonIcon");
-  icon.src = `../src/icons/${data.icon}.png`;
+  icon.src = `./icons/${data.icon}.png`;
 
   const temperature = document.getElementById("londonTemp");
   temperature.textContent = Math.floor(data.temperature) + "°C";
+  }
+  catch (error){
+  }
 }

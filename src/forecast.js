@@ -3,6 +3,7 @@ import { weatherData } from "./weather";
 export async function dayOne() {
 
 const cityData = await weatherData();
+try{
 
   const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${cityData.lat}&lon=${cityData.long}&appid=86798aad821bb8c4ee2887a3873485ff&units=metric`;
 
@@ -17,8 +18,14 @@ const cityData = await weatherData();
   
   return {icon, tempFrom, tempTo, weather, wind}
 }
+catch(error){
+  
+}
+}
 
 export async function dayTwo() {
+
+  try{
 
     const cityData = await weatherData();
 
@@ -35,8 +42,14 @@ export async function dayTwo() {
     
     return {icon, tempFrom, tempTo, weather, wind}
   }
+  catch(error){
+    
+  }
+  }
 
   export async function dayThree() {
+
+    try{
 
     const cityData = await weatherData();
 
@@ -52,9 +65,15 @@ export async function dayTwo() {
     const wind = Math.round(await data.daily[2].wind_speed);
     
     return {icon, tempFrom, tempTo, weather, wind}
+  }catch(error){
+    
+  }
   }
 
   export async function dayFour() {
+    try{
+
+    
 
     const cityData = await weatherData();
 
@@ -70,4 +89,8 @@ export async function dayTwo() {
     const wind = Math.round(await data.daily[3].wind_speed);
     
     return {icon, tempFrom, tempTo, weather, wind}
+  }
+  catch(error){
+    
+  }
   }

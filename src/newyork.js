@@ -12,7 +12,7 @@ async function newYorkData() {
 
     return { temperature, icon };
   } catch (error) {
-    console.log(error);
+    
   }
 }
 
@@ -20,7 +20,7 @@ export async function showNewYorkData() {
   const data = await newYorkData();
 
   const icon = document.getElementById("newYorkIcon");
-  icon.src = `../src/icons/${data.icon}.png`;
+  icon.src = `./icons/${data.icon}.png`;
 
   const temperature = document.getElementById("newYorkTemp");
   temperature.textContent = Math.floor(data.temperature) + "°C";

@@ -20,7 +20,7 @@ export async function showLagosData() {
   const data = await lagosData();
 
   const icon = document.getElementById("lagosIcon");
-  icon.src = `../src/icons/${data.icon}.png`;
+  icon.src = `./icons/${data.icon}.png`;
 
   const temperature = document.getElementById("lagosTemp");
   temperature.textContent = Math.floor(data.temperature) + "°C";

@@ -11,16 +11,19 @@ import {
 } from "./displayForecast";
 
 document.addEventListener("DOMContentLoaded", () => {
+try{
 
-defaultView();
+  defaultView();
 
   const searchBtn = document.getElementById("searchBtn");
   searchBtn.addEventListener("click", () => {
+      
     show();
     displayDayOneForecast();
     displayDayTwoForecast();
     displayDayThreeForecast();
     displayDayFourForecast();
+  
   });
 
   const input = document.getElementById("cityName");
@@ -37,6 +40,11 @@ defaultView();
   showLagosData();
   showLondonData();
   showNewYorkData();
+}
+  catch(error){
+    console.log('caught');
+  }
+
 });
 
 function defaultView(){

@@ -45,6 +45,9 @@ function capitalizeFirstLetter(string) {
 
 export async function show(){
 
+    try{
+        const errorMsg = document.querySelector(".error");
+        errorMsg.textContent = "";
     let city = $city.value;
 
     if(!city){
@@ -75,7 +78,7 @@ export async function show(){
     flUnit.textContent = tempUnit;
 
     const icon = document.getElementById('icon');
-    icon.src = `../src/icons/${data.icon}.png`;
+    icon.src = `./icons/${data.icon}.png`;
 
     const description = document.getElementById('description');
     description.textContent = capitalizeFirstLetter(data.currentWeatherDescription);
@@ -97,6 +100,11 @@ export async function show(){
 
     const windNumber = document.getElementById('windNumber');
    windNumber.textContent = `${data.windSpeed}km/h`;
+    }
+    catch(error){
+        const errorMsg = document.querySelector(".error");
+  errorMsg.textContent = "City not found";
+    }
     
 }
 
