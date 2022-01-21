@@ -47,6 +47,10 @@ export async function show(){
 
     let city = $city.value;
 
+    if(!city){
+        city = 'Dubai';
+      }
+
     const data = await weatherData();
 
     const date = document.querySelector('.date');

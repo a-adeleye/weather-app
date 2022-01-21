@@ -11,6 +11,9 @@ import {
 } from "./displayForecast";
 
 document.addEventListener("DOMContentLoaded", () => {
+
+defaultView();
+
   const searchBtn = document.getElementById("searchBtn");
   searchBtn.addEventListener("click", () => {
     show();
@@ -36,9 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
   showNewYorkData();
 });
 
-document.getElementById("bobobo").addEventListener("click", () => {
-  displayDayOneForecast();
-  displayDayTwoForecast();
-  displayDayThreeForecast();
-  displayDayFourForecast();
-});
+function defaultView(){
+    show();
+    displayDayOneForecast();
+    displayDayTwoForecast();
+    displayDayThreeForecast();
+    displayDayFourForecast();
+}

@@ -9,6 +9,10 @@ const key = '86798aad821bb8c4ee2887a3873485ff';
 export async function weatherData() {
   let city = $city.value;
 
+  if(!city){
+    city = 'Dubai';
+  }
+
   const response = await fetch(`${url}${city}&APPID=${key}&units=${units}`);
   const data = await response.json();
 
