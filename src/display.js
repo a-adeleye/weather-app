@@ -53,9 +53,7 @@ export async function show(){
     date.textContent = today();
 
     const cityName = document.querySelector('.city');
-    /*
-    const $city = document.getElementById('cityName');
-    let city = $city.value; */
+    
     cityName.textContent = city;
 
     const temperature = document.querySelector('.temperatureNumber');

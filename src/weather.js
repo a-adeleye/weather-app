@@ -18,8 +18,10 @@ export async function weatherData() {
   const visibility = await data.main.visibility;
   const windSpeed = await data.wind.speed;
   const icon = await data.weather[0].icon;
+  const dt = await data.dt;
+  const timezone = await data.timezone;
 
-  return { currentWeatherDescription, temperature, feelsLike, pressure, humidity, visibility, windSpeed, icon
+  return { currentWeatherDescription, temperature, feelsLike, pressure, humidity, visibility, windSpeed, icon, dt, timezone
   };
 };
 
