@@ -7,7 +7,9 @@ try{
 
   const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${cityData.lat}&lon=${cityData.long}&appid=86798aad821bb8c4ee2887a3873485ff&units=metric`;
 
-  const response = await fetch(url);
+  const response = await fetch(url,{
+    mode: 'cors',
+  });
   const data = await response.json();
 
   const icon = await data.daily[0].weather[0].icon;
@@ -31,7 +33,9 @@ export async function dayTwo() {
 
     const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${cityData.lat}&lon=${cityData.long}&appid=86798aad821bb8c4ee2887a3873485ff&units=metric`;
   
-    const response = await fetch(url);
+    const response = await fetch(url,{
+      mode: 'cors',
+    });
     const data = await response.json();
   
     const icon = await data.daily[1].weather[0].icon;
@@ -55,7 +59,9 @@ export async function dayTwo() {
 
     const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${cityData.lat}&lon=${cityData.long}&appid=86798aad821bb8c4ee2887a3873485ff&units=metric`;
   
-    const response = await fetch(url);
+    const response = await fetch(url,{
+      mode: 'cors',
+    });
     const data = await response.json();
   
     const icon = await data.daily[2].weather[0].icon;
@@ -79,7 +85,9 @@ export async function dayTwo() {
 
     const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${cityData.lat}&lon=${cityData.long}&appid=86798aad821bb8c4ee2887a3873485ff&units=metric`;
   
-    const response = await fetch(url);
+    const response = await fetch(url,{
+      mode: 'cors',
+    });
     const data = await response.json();
   
     const icon = await data.daily[3].weather[0].icon;

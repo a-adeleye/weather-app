@@ -2,7 +2,7 @@ const $city = document.getElementById("cityName");
 let long = "";
 let lat = "";
 
-const url = "api.openweathermap.org/data/2.5/weather?q=";
+const url = "http://api.openweathermap.org/data/2.5/weather?q=";
 const units = "metric";
 const key = "86798aad821bb8c4ee2887a3873485ff";
 
@@ -19,7 +19,9 @@ export async function weatherData() {
     }
 
   
-    const response = await fetch(`${url}${city}&APPID=${key}&units=${units}`);
+    const response = await fetch(`${url}${city}&APPID=${key}&units=${units}`,{
+      mode: 'cors',
+    });
     const data = await response.json();
 
     const currentWeatherDescription = await data.weather[0].description;
