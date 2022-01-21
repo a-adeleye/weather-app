@@ -54,7 +54,7 @@ export async function show(){
 
     const cityName = document.querySelector('.city');
     
-    cityName.textContent = city;
+    cityName.textContent = capitalizeFirstLetter(city);
 
     const temperature = document.querySelector('.temperatureNumber');
     temperature.textContent = Math.round(data.temperature);

@@ -22,13 +22,6 @@ export async function weatherData() {
   long = await data.coord.lon;
   lat = await data.coord.lat;
 
-  console.log(long);
-  console.log(lat);
-
   return { currentWeatherDescription, temperature, feelsLike, pressure, humidity, windSpeed, icon,
   long, lat};
 };
-
-//export {weatherData};
-
-//console.log(weatherData());
