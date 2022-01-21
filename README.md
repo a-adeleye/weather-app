@@ -12,4 +12,4 @@ Feature ideas to implement.
 
 [Live App](https://aadeleye.github.io/weather-app/)
 
-![alt text]('./weather-app screenshot.png' "App Preview")
+![alt text]('https://github.com/a-adeleye/weather-app/blob/main/weather-app%20screenshot.png "App Preview")
