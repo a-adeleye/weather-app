@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="dashboard">
+      <div class="left">
+        <div class="searchbox">
+          <input type="text" placeholder="search city" id="cityName" />
+          <i class="fas fa-search"></i>
+        </div>
+
+        <p class="date">Thursday 9:00 PM</p>
+        <h2 class="city">Lagos</h2>
+        <div class="temperature">
+          <span class="temperatureNumber">21</span>
+          <span class="temp-unit">°C</span>
+          <div class="fl">
+            <span class="feels-like">Feels like 18</span>
+            <span class="fl-unit">°C</span>
+          </div>
+        </div>
+
+        <div class="wdescription">
+          <img src="../src/icons/04d.png" alt="" style="width: 100px" />
+          <p id="description">Broken clouds</p>
+        </div>
+
+        <div id="tiles">
+          <div class="tile" id="pressure">
+            <span>Pressure</span> <span>1036hPa</span>
+          </div>
+          <div class="tile" id="humidity">
+            <span>Humidity</span> <span>67%</span>
+          </div>
+          <div class="tile" id="windspeed">
+            <span>Wind</span> <span>10.0km</span>
+          </div>
+        </div>
+
+        <!-- <input type="checkbox" name="unit" id="unit" />
+        <label for="unit"></label> -->
+      </div>
+      <div class="right">
+        <div class="toprow">
+          <div class="col" id="one">
+            <div class="tp">
+              <h3>Monday</h3>
+              <p class="dt">24 Jul</p>
+            </div>
+            <img src="../src/icons/01d.png" alt="" style="width: 100px" />
+            <p>27<sup>o</sup>C</p>
+            <p class="dsc">THUNDERSHOWER</p>
+            <p class="wind">Wind 4km/h</p>
+          </div>
+          <div class="col" id="two">
+            <div class="tp">
+              <h3>Monday</h3>
+              <p class="dt">24 Jul</p>
+            </div>
+            <img src="../src/icons/03n.png" alt="" style="width: 100px" />
+            <p>27<sup>o</sup>C</p>
+            <p class="dsc">THUNDERSHOWER</p>
+            <p class="wind">Wind 4km/h</p>
+          </div>
+          <div class="col" id="three">
+            <div class="tp">
+              <h3>Monday</h3>
+              <p class="dt">24 Jul</p>
+            </div>
+            <img src="../src/icons/09d.png" alt="" style="width: 100px" />
+            <p>27<sup>o</sup>C</p>
+            <p class="dsc">THUNDERSHOWER</p>
+            <p class="wind">Wind 4km/h</p>
+          </div>
+          <div class="col" id="four">
+            <div class="tp">
+              <h3>Monday</h3>
+              <p class="dt">24 Jul</p>
+            </div>
+            <img src="../src/icons/04n.png" alt="" style="width: 100px" />
+            <p>27<sup>o</sup>C</p>
+            <p class="dsc">THUNDERSHOWER</p>
+            <p class="wind">Wind 4km/h</p>
+          </div>
+        </div>
+        <div class="bottomrow">
+          <div class="box" id="boxOne">
+            <img src="http://openweathermap.org/img/w/04n.png" />
+            <div>
+              <p class="city">Beijing</p>
+              <p class="temp">23</p>
+            </div>
+          </div>
+          <div class="box" id="boxTwo">
+            <img src="http://openweathermap.org/img/w/04n.png" />
+            <div>
+              <p class="city">Beijing</p>
+              <p class="temp">23</p>
+            </div>
+          </div>
+          <div class="box" id="boxThree">
+            <img
+              src="http://openweathermap.org/img/w/04n.png"
+              style="width: 100px"
+            />
+            <div>
+              <p class="city">Beijing</p>
+              <p class="temp">23</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
