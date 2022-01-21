@@ -10,6 +10,6 @@ Feature ideas to implement.
 
 - Display user location by default.
 
-[Live App](https://aadeleye.github.io/weather-app/)
+<div align="center"><img src="./weather-app screenshot.png" alt="screenshot of website" width="1000" /></div>
 
-![alt text]('https://github.com/a-adeleye/weather-app/blob/main/weather-app%20screenshot.png "App Preview")
+[Live App](https://a-adeleye.github.io/weather-app/)
