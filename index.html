@@ -11,6 +11,12 @@
     <title>Weather App</title>
   </head>
   <body>
+    <input
+      type="button"
+      value="Click"
+      id="bobobo"
+      style="width: 150px; height: 100px"
+    />
     <div class="dashboard">
       <div class="left">
         <div class="searchbox">
@@ -45,21 +51,18 @@
             <span id="windspeed"></span> <span id="windNumber"></span>
           </div>
         </div>
-
-        <!-- <input type="checkbox" name="unit" id="unit" />
-        <label for="unit"></label> -->
       </div>
       <div class="right">
         <div class="toprow">
           <div class="col" id="one">
             <div class="tp">
-              <h3>Monday</h3>
-              <p class="dt">24 Jul</p>
+              <h3 id="dayOneDay"></h3>
+              <p id="dayOneDate" class="dt"></p>
             </div>
-            <img src="../src/icons/01d.png" />
-            <p>27<sup>o</sup>C</p>
-            <p class="dsc">THUNDERSHOWER</p>
-            <p class="wind">Wind 4km/h</p>
+            <img id="dayOneIcon" />
+            <p class="forecastTemp" id="dayOneTemp"></p>
+            <p id="dayOneWeather" class="dsc"></p>
+            <p id="dayOneWind" class="wind"></p>
           </div>
           <div class="col" id="two">
             <div class="tp">
@@ -67,7 +70,7 @@
               <p class="dt">24 Jul</p>
             </div>
             <img src="../src/icons/03n.png" />
-            <p>27<sup>o</sup>C</p>
+            <p class="forecastTemp">27°C to 27°C</p>
             <p class="dsc">THUNDERSHOWER</p>
             <p class="wind">Wind 4km/h</p>
           </div>
