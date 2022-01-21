@@ -15,13 +15,11 @@ export async function weatherData() {
   const feelsLike = await data.main.feels_like;
   const pressure = await data.main.pressure;
   const humidity = await data.main.humidity;
-  const visibility = await data.main.visibility;
   const windSpeed = await data.wind.speed;
   const icon = await data.weather[0].icon;
-  const dt = await data.dt;
-  const timezone = await data.timezone;
 
-  return { currentWeatherDescription, temperature, feelsLike, pressure, humidity, visibility, windSpeed, icon, dt, timezone
+
+  return { currentWeatherDescription, temperature, feelsLike, pressure, humidity, windSpeed, icon
   };
 };
 

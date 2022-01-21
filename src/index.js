@@ -1,7 +1,10 @@
 import './style.css';
 import {show} from './display'
-// import { tempUnit } from './display';
 import { toggleTemperature } from './display';
+import { showLagosData } from './lagos';
+import {showLondonData} from './london';
+import { showNewYorkData } from './newyork';
+
 
 
 const searchBtn = document.getElementById('searchBtn');
@@ -18,12 +21,6 @@ input.addEventListener("keyup", function(event) {
 const temperatureUnit = document.querySelector('.temp-unit');
 temperatureUnit.addEventListener('click',toggleTemperature);
 
-
-
-
-//show();
-
-//const weather = await weatherData();
-
-//console.log(weather); */
-
+showLagosData();
+showLondonData();
+showNewYorkData();
