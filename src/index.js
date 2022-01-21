@@ -4,11 +4,13 @@ import { toggleTemperature } from './display';
 import { showLagosData } from './lagos';
 import {showLondonData} from './london';
 import { showNewYorkData } from './newyork';
-
-
+import { displayDayOneForecast } from './displayForecast';
 
 const searchBtn = document.getElementById('searchBtn');
-searchBtn.addEventListener('click',show);
+searchBtn.addEventListener('click',()=>{
+    show();
+    
+});
 
 var input = document.getElementById("cityName");
 input.addEventListener("keyup", function(event) {
@@ -21,6 +23,12 @@ input.addEventListener("keyup", function(event) {
 const temperatureUnit = document.querySelector('.temp-unit');
 temperatureUnit.addEventListener('click',toggleTemperature);
 
-showLagosData();
-showLondonData();
-showNewYorkData();
+
+
+
+//showLagosData();
+//showLondonData();
+//showNewYorkData();
+
+
+document.getElementById('bobobo').addEventListener('click',displayDayOneForecast);

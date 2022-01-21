@@ -1,4 +1,6 @@
 const $city = document.getElementById('cityName');
+let long = '';
+let lat = '';
 
 const url = 'http://api.openweathermap.org/data/2.5/weather?q=';
 const units = 'metric';
@@ -17,10 +19,14 @@ export async function weatherData() {
   const humidity = await data.main.humidity;
   const windSpeed = await data.wind.speed;
   const icon = await data.weather[0].icon;
+  long = await data.coord.lon;
+  lat = await data.coord.lat;
 
+  console.log(long);
+  console.log(lat);
 
-  return { currentWeatherDescription, temperature, feelsLike, pressure, humidity, windSpeed, icon
-  };
+  return { currentWeatherDescription, temperature, feelsLike, pressure, humidity, windSpeed, icon,
+  long, lat};
 };
 
 //export {weatherData};
