@@ -1,13 +1,15 @@
+const $city = document.getElementById('cityName');
+
 const url = 'http://api.openweathermap.org/data/2.5/weather?q=';
-const city = 'London';
 const units = 'metric';
 const key = '86798aad821bb8c4ee2887a3873485ff';
 
 export async function weatherData() {
+  let city = $city.value;
+
   const response = await fetch(`${url}${city}&APPID=${key}&units=${units}`);
   const data = await response.json();
 
-  const currentWeather = await data.weather[0].main;
   const currentWeatherDescription = await data.weather[0].description;
   const temperature = await data.main.temp;
   const feelsLike = await data.main.feels_like;
@@ -17,9 +19,10 @@ export async function weatherData() {
   const windSpeed = await data.wind.speed;
   const icon = await data.weather[0].icon;
 
-  return {
-    currentWeather, currentWeatherDescription, temperature, feelsLike, pressure, humidity, visibility, windSpeed, icon
+  return { currentWeatherDescription, temperature, feelsLike, pressure, humidity, visibility, windSpeed, icon
   };
-}
+};
+
+//export {weatherData};
 
 //console.log(weatherData());

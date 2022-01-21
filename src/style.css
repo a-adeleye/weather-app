@@ -26,17 +26,14 @@ html {
   justify-content: space-between;
   width: 80%;
   max-width: 980px;
-  height: 90vh;
+  height: 95vh;
+  max-height: 600px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: #f6faff;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
   border-radius: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
   padding: 20px;
 }
 
@@ -44,6 +41,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   background: rgb(63, 94, 251);
   background: linear-gradient(
     319deg,
@@ -54,42 +52,6 @@ html {
   min-width: 250px;
   height: 100%;
   border-radius: 30px;
-}
-
-.date {
-  color: white;
-  font-size: 0.8em;
-}
-
-.city {
-  color: white;
-  font-size: 1.5em;
-}
-
-.temperature {
-  margin-top: 10px;
-}
-
-.temperatureNumber {
-  font-size: 4rem;
-  color: white;
-  font-weight: bolder;
-}
-
-.temp-unit {
-  position: absolute;
-  color: #ffd059;
-  font-size: 1.5rem;
-  margin-left: -10px;
-}
-
-.wdescription {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.wdescription p {
-  font-size: 0.8em;
 }
 
 .searchbox {
@@ -104,7 +66,7 @@ html {
   color: #ffffff;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
-  margin: 0 auto 10px;
+  /* margin: 0 auto 10px; */
 }
 
 .searchbox > i,
@@ -125,6 +87,35 @@ input[type="text"] {
   padding-right: 5px;
 }
 
+.date {
+  color: white;
+  font-size: 0.8em;
+}
+
+.city {
+  color: white;
+  font-size: 1.5em;
+}
+
+.temperature {
+  /* margin-top: 10px; */
+  text-align: center;
+}
+
+.temperatureNumber {
+  font-size: 4rem;
+  color: white;
+  font-weight: bolder;
+}
+
+.temp-unit {
+  position: absolute;
+  color: #ffd059;
+  font-size: 1.5rem;
+  margin-left: -10px;
+  cursor: pointer;
+}
+
 .feels-like {
   font-size: 0.8rem;
   color: white;
@@ -136,6 +127,19 @@ input[type="text"] {
   font-size: 0.6rem;
 }
 
+.wdescription {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.wdescription p {
+  font-size: 0.8em;
+}
+
+.wdescription img {
+  width: 100px;
+}
+
 #tiles {
   width: 100%;
   display: flex;
@@ -143,6 +147,7 @@ input[type="text"] {
   justify-content: space-between;
   color: rgb(255, 255, 255);
   margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 .tile {
